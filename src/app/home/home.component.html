@@ -1,0 +1,30 @@
+
+<div class="row">
+  <div class="blogSearch">
+  <input [(ngModel)]="searchValue" type="input" placeholder="Search.." (keyup.enter)="filter()">
+  <button (click)="filter()"><i class="fa fa-search"></i></button>
+</div>
+</div>
+<div class="row">
+  <div class="col-8">
+    <div class="card" *ngFor="let blog of blogs | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
+      <div class="card-body" >
+        <h5 class="card-title">{{blog.blogtitle}}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">{{blog.blogdate | date }} {{blog.showname}}</h6>
+        <p class="card-text">
+          {{blog.blogcontent}}
+        </p>
+      </div>
+    </div>
+    <ngb-pagination
+      [(page)]="page"
+      [pageSize]="pageSize"
+      [collectionSize]="blogs.length"></ngb-pagination>
+  </div>
+  <div class="col-4" style="margin-top: 10px">
+      <ngx-twitter-timeline 
+      [data]="{sourceType: 'url', url: 'https://twitter.com/lorecubby'}"
+      [opts]="{tweetLimit: 3}">
+    </ngx-twitter-timeline>
+  </div>
+</div>

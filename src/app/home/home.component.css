@@ -1,0 +1,16 @@
+
+.card-body {
+    background-color: white;
+    
+}
+.card {
+    margin: 0 auto; /* Added */
+    float: none; /* Added */
+    margin-top: 10px;
+    margin-bottom: 10px; /* Added */
+}
+
+.blogSearch{
+    margin: 10px 15px 0px 15px;
+}
+

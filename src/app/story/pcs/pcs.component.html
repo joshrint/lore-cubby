@@ -1,0 +1,19 @@
+<div class='panel panel-primary'>
+    <div class='panel-body'>
+      <div class='row'>
+        <div class='col-md-10 mx-auto' *ngFor='let pc of filteredPCs'>
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">{{ pc.pcname}}</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Race: {{ pc.pcrace }}</h6>
+              <h6 class="card-subtitle mb-2 text-muted"> Class: {{ pc.pcclass }}</h6>
+              <p class="card-text">
+                {{ pc.pcdescription }}
+              </p>
+              <p>Player: {{ pc.playername }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>

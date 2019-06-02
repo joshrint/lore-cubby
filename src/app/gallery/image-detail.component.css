@@ -1,0 +1,24 @@
+.full-image {
+    margin-top: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+#caption {
+    margin: 0 auto;
+    font-size: 1.5em;
+    font-family: "Montserrat", sans-serif;
+    color: #222;
+    background-color: #f5f5f5;
+    border: 1px solid #bbb;
+    
+}
+.caption-row{
+    padding: 24px;
+    text-align: center;
+  }
+#artist {
+  font-size: 0.8em;
+  color: #627C85;
+}

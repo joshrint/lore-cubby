@@ -1,0 +1,14 @@
+  <div class="row" *ngIf='image'>
+    <img src="{{image.pictureurl}}" [ngStyle]="setImageSize()" class="full-image" (click)="changeRatio()">
+  <div class="col-md-12 caption-row">
+    <div id ="caption">
+      <b>{{ image.picturetitle }} </b>
+      <br>
+      <span id="artist">Artist: {{ image.artist }}</span>
+      <br>
+
+      <a class="btn btn-lg btn-link" [routerLink]="['/gallery']">Back</a>
+    </div>
+  </div>
+</div>
+    

@@ -1,0 +1,17 @@
+.card {
+    margin-top: 10px; /* Added */
+}
+.card-subtitle {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #191923;
+}
+.card-title {
+    color: #191923;
+}
+.card-text {
+    padding: 10px;
+}
+.title {
+    margin-top: 10px;
+}

@@ -1,0 +1,25 @@
+
+
+<div class="row">
+  <button class="btn btn-lg btn-info title" (click)="filter('All')">All</button>
+  <button class="btn btn-lg btn-info title" (click)="filter('Memes')">Memes</button>
+  <button class="btn btn-lg btn-info title" (click)="filter('Session Photo')">Session Photo</button>
+  <button class="btn btn-lg btn-info title" (click)="filter('Related Photo')">Related Photo</button>
+  
+  <div class="w-100"></div>
+  <div class="card-columns">
+    <div *ngFor="let image of gallery | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
+      <div class="card" >
+          <a [routerLink]="['/gallery', image.pictureid]">
+            <img src="{{image.pictureurl}}" class="card-img-top">
+          </a>
+      </div>
+      
+    </div>
+</div>
+<div class="w-100"></div>
+      <ngb-pagination
+        [(page)]="page"
+        [pageSize]="pageSize"
+        [collectionSize]="gallery.length"></ngb-pagination>
+</div>

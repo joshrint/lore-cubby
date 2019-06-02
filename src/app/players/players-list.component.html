@@ -1,0 +1,24 @@
+<div class='panel panel-primary'>
+  <div class='panel-body'>
+    <div class='row'>
+      <div class='col-md-10 mx-auto' *ngFor='let player of filteredPlayers'>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">{{ player.playername }}
+                <div class="profile"><img src="{{ player.profpic }}" alt="{{player.playername}}" style="float:right;width:200px;height:200px;"></div>
+            </h5>
+            <h6 class="card-subtitle">Race: {{ player.race }}</h6>
+            <h6 class="card-subtitle"> Class: {{ player.class }}</h6>
+            <p class="card-text">
+              {{ player.bio }}
+            </p>
+              <ul id="horizontal-list">
+                <li><a href="https://twitter.com/{{ player.twitter }}"><i class="fab fa-twitter"> @{{ player.twitter }}</i></a></li>
+                <li><a href="https://www.instagram.com/{{ player.instagram }}"><i class="fab fa-instagram"></i> @{{ player.instagram }}</a></li>
+              </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>

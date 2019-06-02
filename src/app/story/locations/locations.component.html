@@ -1,0 +1,36 @@
+<div class='panel panel-primary'>
+  <div class='panel-body'>
+      <div class='row'>
+          <div class='col-md-10 mx-auto'>
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">
+                  Dranemar Histoire
+                </h5>
+                <h6 class="card-subtitle mb-2 text-muted">Victory of the Syndicates</h6>
+                <p class="card-text">
+                    The kingdom of Dranemar has been at war with itself for the last half century. Not many know this warm existed. The Wurm King banned all magic. No wizards, sorcerers, druids, or clerics. All rangers went into hiding into the forests and mountains. The country grew stagnant and withered. The boarder cantons fell to invasions, the weather was no longer reliable and crops withered as farmers had to re-learn mundane agriculture. Diseases once easily treated ran rampant through cities. The coup was fast and effective. Once Lady Valentin Baeré threw the Wurm King from the highest parapet of the Lord's Castle she declared the Syndicates the new leaders of Dranemar. The crown prince surender the throne when Baeré soldiers stormed the castle making their takeover absolute.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      <div class="row">
+        <div class="col-md-10 mx-auto">
+            <h1 class="title">Syndicates</h1>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='col-md-10 mx-auto' *ngFor='let syndicate of syndicates'>
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">{{ syndicate.syndicatename }} </h5>
+              <h6 class="card-subtitle mb-2 text-muted">{{ syndicate.responsibility }}</h6>
+              <p class="card-text"> Founder: {{ syndicate.founder }} <br>
+              Current Leader: {{ syndicate.currentleader }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
